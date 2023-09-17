@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Winery</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.shop.js"></script>
+<link rel="stylesheet" type="text/css" href="D:\project/home.css">
+</head>
+
+<body>
+
+<div class="container">
+		<div class="navbar">
+		<div class="logo">
+			<img src="D:\project/logo.png" width="125px;">
+		</div>
+		<nav>
+			<ul id="MenuItem">
+				<li><a href="">Home</a></li>
+				<li><a href="">Products</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="">Account</a></li>
+			</ul>
+		</nav>
+		<a href="D:\project\cart/cart.html"><img src="D:\project/cart.png" width="30px" height="30px"></a>
+		<img src="D:\project/menu.png" class="menu-icon" onclick="menutoggle()">
+	</div>
+	 
+	</div>
+	<div id="content">
+		<div id="products">
+			<ul>
+				<li>
+					<div class="product-image">
+						<img src="D:\project/gallery-1.jpg" alt="" width="100%" id="ProductImg">
+						<div class="small-img-row">
+					<div class="small-img-col">
+						<img src="D:\project/gallery-1.jpg" width="100%" class="small-img">
+					</div>
+					<div class="small-img-col">
+						<img src="D:\project/gallery-2.jpg" width="100%" class="small-img">
+					</div>
+					<div class="small-img-col">
+						<img src="D:\project/gallery-3.jpg" width="100%" class="small-img">
+					</div>
+					<div class="small-img-col">
+						<img src="D:\project/gallery-4.jpg" width="100%" class="small-img">
+					</div>
+					</div>
+					<div class="product-description" data-name="Wine #1" data-price="5">
+						<h3 class="product-name">Wine #1</h3>
+						<p class="product-price">&euro; 5</p>
+						<form class="add-to-cart" action="cart.html" method="post">
+							<div>
+								<label for="qty-1">Quantity</label>
+								<input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+							</div>
+							<p><input type="submit" value="Add to cart" class="btn" /></p>
+						</form>
+					</div>
+				</li>
+				
+				
+				
+			</ul>
+		</div>
+	</div>
+	
+	
+
+</div>
+
+<!--------footer---------->
+
+	<div class="footer"> 
+		<div class="container">
+			<div class="row">
+				<div class="footer-col-1">
+					<h3>Download Our App</h3>
+					<p>Imagine how much harder reading and writing would</p>
+					<div class="app-logo">
+						<img src="D:\project/play-store.png">
+						<img src="D:\project/app-store.png">
+					</div>
+				</div>
+				<div class="footer-col-2">
+					<img src="D:\project/logo-white.png">
+					<p>Imagine how much harder reading and writing would be if everything was just</p>
+				</div>
+				<div class="footer-col-3">
+					<h3>Useful Links</h3>
+					<ul>
+						<li>Coupons</li>
+						<li>Blog Post</li>
+						<li>Return Policy</li>
+						<li>Join Affiliate</li>
+					</ul>
+				</div>
+				<div class="footer-col-4">
+					<h3>Follow us</h3>
+					<ul>
+						<li>Facebook</li>
+						<li>Instagram</li>
+						<li>Twitter</li>
+						<li>Youtube</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<p class="copyright">Copyright 2020 - Easy Tutorials</p>
+		</div>
+	</div>
+<!-------js foe toggle menu---------->
+	<script>
+		var MenuItem = document.getElementById("MenuItem");
+
+		MenuItem.style.maxHeight = "0px";
+
+		function menutoggle(){
+			if(MenuItem.style.maxHeight == "0px")
+			{
+				MenuItem.style.maxHeight = "200px";
+			}
+			else{
+				MenuItem.style.maxHeight = "0px";
+			}
+		}
+	</script>
+
+<!--------product gallary------->
+
+	<script>
+		var ProductImg = document.getElementById("ProductImg");
+		var SmallImg = document.getElementsByClassName("small-img");
+
+		SmallImg[0].onclick = function()
+		{
+			ProductImg.src = SmallImg[0].src;
+		}
+		SmallImg[1].onclick = function()
+		{
+			ProductImg.src = SmallImg[1].src;
+		}
+		SmallImg[2].onclick = function()
+		{
+			ProductImg.src = SmallImg[2].src;
+		}
+		SmallImg[3].onclick = function()
+		{
+			ProductImg.src = SmallImg[3].src;
+		}
+	</script>
+
+</body>
+</html>	
